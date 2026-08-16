@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Details Entry Form</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 style="background-color: rgb(250, 193, 118); padding: 5px;">Details Entry Form</h2>
+
+        <h3>Select Type</h3>
+
+        <div class="selection">
+            <input type="radio" name="type" onclick="showForm('student.html')">
+            Student
+
+            <input type="radio" name="type" onclick="showForm('employee.html')">
+            Employee
+
+            <input type="radio" name="type" onclick="showForm('faculty.html')">
+            Faculty
+        </div>
+
+        <iframe id="formFrame" src="student.html"></iframe>
+    </div>
+
+    <script>
+        function showForm(page) {
+            document.getElementById("formFrame").src = page;
+        }
+    </script>
+
+</body>
+</html>
